@@ -4,3 +4,5 @@
 # Learn APIs fundamentals
 # Learn System Design
 # Learn Backend Development 
+# Learn DevOps 
+# Learn Cloud Computing 

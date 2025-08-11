@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 const app = express();
 
 const dbConnection = require('./config/dbConnection');
+const userAuthRoutes = require('./routes/userAuth.route');
 
 dotenv.config();
 
@@ -17,8 +18,10 @@ const port = process.env.PORT || 5000;
 
 // Home API endpoint
 app.get('/', (req, res) => {
-  res.send('Welcome to the Krishi Unnati API');
+  res.send('Welcome to the API');
 });
+
+app.use('/auth', userAuthRoutes);
 
 // Start the server
 app.listen(port, () => {
